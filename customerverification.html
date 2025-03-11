@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        
+ <script>
+// If user clicks anywhere outside of the modal, Modal will close
+
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+
+ 
+</head>
+<body>
+
+<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+Open Popup</button>
+
+<div id="modal-wrapper" class="modal">
+
+<form class="modal-content animate" action="customerverificationdata.jsp">
+
+<div class="imgcontainer">
+<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+</div>
+
+<div class="container">
+<h3 class="text-Info">Customer Verification</h3>
+<input type="text"  name="otp" placeholder="Eneter OTP send to you Registerd Mobileno">
+<button type="submit">submit</button>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
